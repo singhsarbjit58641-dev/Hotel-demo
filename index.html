@@ -2,36 +2,69 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Hotel Demo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luxury Hotel</title>
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #f4f8fb;
-      color: #333;
+      background: #f2f2f2;
     }
     header {
-      background: #0d6efd;
+      background: url('https://images.unsplash.com/photo-1566073771259-6a8506099945') center/cover;
       color: white;
-      padding: 20px;
+      padding: 60px 20px;
       text-align: center;
     }
     section {
       padding: 20px;
     }
+    h2 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+    }
     .card {
       background: white;
-      padding: 15px;
-      margin-bottom: 15px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .card p {
+      padding: 10px;
+      text-align: center;
+    }
+    iframe {
+      width: 100%;
+      height: 250px;
+      border: 0;
+      border-radius: 10px;
     }
     footer {
-      background: #0d6efd;
+      background: #0d47a1;
       color: white;
       text-align: center;
-      padding: 10px;
+      padding: 15px;
+    }
+    .call {
+      position: fixed;
+      bottom: 15px;
+      right: 15px;
+      background: green;
+      color: white;
+      padding: 12px 18px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -39,28 +72,58 @@
 
 <header>
   <h1>Luxury Hotel</h1>
-  <p>Welcome to our demo hotel website</p>
+  <p>Comfort • Style • Relaxation</p>
 </header>
 
 <section>
-  <div class="card">
-    <h2>Rooms</h2>
-    <p>AC & Non-AC rooms available</p>
-  </div>
-
-  <div class="card">
-    <h2>Facilities</h2>
-    <p>Free WiFi, Parking, Restaurant</p>
-  </div>
-
-  <div class="card">
-    <h2>Contact</h2>
-    <p>📞 98765-43210</p>
+  <h2>Our Rooms</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511">
+      <p>Deluxe AC Room</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427">
+      <p>Non-AC Budget Room</p>
+    </div>
   </div>
 </section>
 
+<section>
+  <h2>Swimming Pool</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1501117716987-c8e1ecb210b1">
+      <p>Clean & Luxury Pool</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Gallery</h2>
+  <div class="cards">
+    <div class="card"><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb"></div>
+    <div class="card"><img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa"></div>
+    <div class="card"><img src="https://images.unsplash.com/photo-1568495248636-6432b97bd949"></div>
+  </div>
+</section>
+
+<section>
+  <h2>Location</h2>
+  <iframe 
+    src="https://www.google.com/maps?q=delhi&output=embed">
+  </iframe>
+</section>
+
+<section>
+  <h2>Contact Us</h2>
+  <p style="text-align:center;">📞 98765-43210</p>
+</section>
+
+<a class="call" href="tel:9876543210">Call Now</a>
+
 <footer>
-  <p>© 2026 Hotel Demo</p>
+  © 2026 Luxury Hotel
 </footer>
 
 </body>
